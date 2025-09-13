@@ -1,0 +1,174 @@
+@media (max-width: 575px) {
+    body {
+        margin-top: 0;
+    }
+
+    section.menu-desktop {
+        display: none;
+    }
+
+    section.hero {
+        flex-direction: column-reverse;
+        padding: 10px;
+    }
+
+    section.hero .categorias h2 {
+        font-size: 1rem;
+    }
+
+    section.menu-mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: var(--fundo-principal-color);
+        padding: 15px 20px;
+        z-index: 999;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        border-top: 2px solid var(--back-dourado);
+        border-radius: 20px 20px 0 0;
+    }
+
+    section.menu-mobile a {
+        color: var(--fundo-texto);
+        border: 2px solid transparent;
+        padding: 12px;
+        border-radius: 50%;
+        transition: 0.3s ease-in-out;
+        font-size: 1.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section.menu-mobile a:hover {
+        transform: translateY(-10px) scale(1.1);
+        background: var(--back-dourado);
+        color: var(--fundo-principal-color);
+        box-shadow: 0 6px 16px rgba(212, 175, 55, 0.4);
+    }
+
+    section.menu-mobile a.active {
+        transform: translateY(-10px) scale(1.1);
+        background: linear-gradient(135deg, #FFD700, #D4AF37);
+        color: var(--fundo-principal-color);
+        box-shadow: 0 6px 16px rgba(212, 175, 55, 0.6);
+        border: 2px solid var(--back-dourado);
+    }
+
+    .logo-mobile img {
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        border: 2px solid var(--back-dourado);
+        background: var(--fundo-principal-color);
+        padding: 5px;
+        transform: translateY(-15px);
+        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.5);
+    }
+
+    section.hero .slider {
+        width: 100%;
+        height: 100%;
+    }
+
+    section.hero .slider img {
+        width: 100%;
+    }
+
+    section.beneficios {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    section.categorias-cards .card h2 {
+        font-size: 0.8rem;
+    }
+
+    section.categorias-cards {
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    section.servicos {
+        padding: 20px 20px;
+    }
+
+    section.servicos h2 {
+        font-size: 1.8rem;
+    }
+
+    section.servicos .salao_beleza {
+        flex-direction: column;
+    }
+
+    section.servicos .salao_beleza .card-principal {
+        width: 100%;
+        height: 300px;
+    }
+
+    section.servicos .salao_beleza .servico {
+        width: 100%;
+    }
+
+    section.servicos .salao_beleza .servico .card {
+        margin: 0;
+    }
+
+    .produtos .card {
+        max-width: 100%;
+    }
+
+    footer .newsletter{
+        flex-direction: column;
+    }
+
+    footer .newsletter .txt h2 {
+        font-size: 20px;
+    }
+
+    footer .newsletter .txt p {
+        font-size: 14px;
+    }
+
+    footer .newsletter form input {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    footer .newsletter form button {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    footer .footer{
+        gap: 10px;
+    }
+
+    footer .footer .image h6 {
+        font-size: 12px;
+        align-items: start;
+        margin-bottom: 20px;
+    }
+
+    footer .footer .links h3 {
+        font-size: 18px;
+    }
+
+    footer .footer .links h5 {
+        font-size: 14px;
+    }
+
+    footer .end h4 {
+        font-size: 14px;
+    }
+
+    footer .footer .image img {
+        width: 140px;
+    }
+
+
+}

@@ -1,0 +1,539 @@
+/* container dos dots */
+.slick-dots {
+  bottom: 20px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  z-index: 9;
+}
+
+.slick-dots li button:before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+  background-color: var(--fundo-texto);
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  width: 30px;
+  height: 10px;
+  border-radius: 20px;
+  background-color: var(--back-dourado);
+  opacity: 1;
+  box-shadow: 0 2px 6px rgba(255, 87, 34, 0.4);
+}
+
+/* hover nos dots */
+.slick-dots li button:hover:before {
+  background-color: #ff784e;
+  opacity: 1;
+}
+
+
+section.hero {
+  display: flex;
+  gap: 30px;
+  padding: 20px 30px;
+  min-height: 80vh;
+  align-items: stretch;
+}
+
+section.hero .categorias {
+  flex: 1;
+  background: rgba(10, 37, 64, 0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 16px;
+  padding: 20px;
+  color: var(--fundo-texto);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.hero .categorias:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+section.hero .categorias h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--fundo-texto);
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+section.hero .categorias .item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+section.hero .categorias .item a {
+  color: var(--fundo-texto);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+section.hero .categorias .item a:hover {
+  background: var(--fundo-texto);
+  color: #0A2540;
+}
+
+section.hero .slider {
+  flex: 2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+section.hero .slider img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+section.beneficios {
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+  background-color: var(--back-dourado);
+  flex-wrap: wrap;
+}
+
+section.beneficios .desc {
+  flex: 1;
+  min-width: 250px;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.beneficios .desc img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+section.beneficios .txt h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--fundo-texto);
+  letter-spacing: 2px;
+  font-family: "Lato", sans-serif;
+}
+
+section.beneficios .txt p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--fundo-texto);
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+}
+
+section.categorias-cards {
+  margin: 30px 0;
+  padding: 0 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+section.categorias-cards .card {
+  flex: 1 1 calc(50% - 20px);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.categorias-cards .card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%; 
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 215, 0, 0) 0%,
+    rgba(255, 215, 0, 0.6) 50%,
+    rgba(255, 215, 0, 0) 100%
+  );
+  transform: skewX(-25deg);
+  transition: left 0.7s ease; 
+}
+
+section.categorias-cards .card:hover::after {
+  left: 125%; 
+}
+
+section.categorias-cards .card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+section.categorias-cards .card .overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(11, 5, 46, 0.45);
+  z-index: 1;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+
+section.categorias-cards .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+section.categorias-cards .card h2 {
+  color: var(--fundo-texto);
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+section.servicos {
+  padding: 60px 30px;
+}
+
+section.servicos h2 {
+  color: var(--fundo-texto);
+  margin-bottom: 40px;
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+section.servicos h2 span {
+  color: var(--back-dourado);
+}
+
+section.servicos .descricoes {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+section.servicos .salao_beleza {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+section.servicos .salao_beleza .card-principal {
+  position: relative;
+  width: 28%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease;
+}
+
+section.servicos .salao_beleza .card-principal:hover {
+  transform: translateY(-6px);
+}
+
+section.servicos .salao_beleza .card-principal img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+section.servicos .salao_beleza .card-principal h2 {
+  color: var(--fundo-texto);
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 3px 8px rgba(0,0,0,0.7);
+}
+
+section.servicos .salao_beleza .card-principal .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 37, 64, 0.45);
+  z-index: 1;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+section.servicos .salao_beleza .card-principal:hover .overlay {
+  background: rgba(10, 37, 64, 0.6);
+}
+
+section.servicos .salao_beleza .servico {
+  display: flex;
+  width: 70%;
+}
+
+section.servicos .salao_beleza .servico .card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 16px;
+  margin: 12px;
+  cursor: pointer;
+  text-align: center;
+}
+
+section.servicos .salao_beleza .servico .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+section.servicos .salao_beleza .servico .card img {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+section.servicos .salao_beleza .servico .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nome do produto */
+section.servicos .salao_beleza .servico .card .nome-produto h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--fundo-principal-color);
+  margin-bottom: 10px;
+  font-family: "Lato", sans-serif;
+}
+
+/* Preços */
+section.servicos .salao_beleza .servico .card .price {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  align-items: baseline;
+}
+
+section.servicos .salao_beleza .servico .card .price_recent {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--back-dourado);
+}
+
+section.servicos .salao_beleza .servico .card .price_last {
+  font-size: 1rem;
+  color: var(--red-color);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Botões do card */
+section.servicos .salao_beleza .servico .card .button {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+section.servicos .salao_beleza .servico .card .button button {
+  background: var(--back-dourado);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fundo-texto);
+}
+
+section.servicos .salao_beleza .servico .card .button button:hover {
+  background: var(--fundo-principal-color);
+  color: var(--back-dourado);
+  transform: scale(1.1);
+}
+
+.swiper-pagination {
+  position: absolute !important;
+  bottom: -35px !important;
+  left: 0;
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--fundo-texto) !important;
+  opacity: 1; 
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  height: 10px !important;
+  border-radius: 20px !important;
+  background-color: var(--back-dourado) !important;
+  box-shadow: 0 2px 6px rgba(255, 87, 34, 0.4) !important;
+}
+
+
+.swiper-pagination{
+  position: absolute !important;
+  bottom: -3px !important;
+  
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--fundo-texto) !important;    
+  opacity: 1; 
+  width: 12px;
+  height: 12px;
+  margin: 0 6px !important;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  bottom: -20px !important;
+}
+
+.swiper-pagination-bullet-active {
+  width: 30px !important;
+  height: 10px !important;
+  border-radius: 20px !important;
+  background-color: var(--back-dourado) !important;
+  opacity: 1 !important;
+  box-shadow: 0 2px 6px rgba(255, 87, 34, 0.4) !important;
+  
+}
+
+.prod-card{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.produtos .card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 16px;
+  max-width: 300px;
+  position: relative;
+}
+
+.produtos .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.produtos .card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: transform 0.4s ease;
+}
+
+.produtos .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Nome do produto */
+.produtos .nome-produto h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--fundo-principal-color);
+  margin: 10px 0;
+}
+
+/* Preço */
+.produtos .price {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: baseline;
+}
+
+.produtos .price_recent {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--back-dourado);
+}
+
+.produtos .price_last {
+  font-size: 1rem;
+  color: var(--red-color);
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+/* Botões de ação */
+.produtos .button {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.produtos .button button {
+  background: var(--back-dourado);
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--fundo-texto);
+}
+
+.produtos .button button:hover {
+  background: var(--fundo-principal-color);
+  color: var(--back-dourado);
+  transform: scale(1.1);
+}

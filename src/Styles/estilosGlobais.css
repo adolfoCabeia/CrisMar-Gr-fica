@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --fundo-principal-color: #0A2540;
+    --fundo-texto: #fff;
+    --back-dourado: #D4AF37;
+    --red-color: #B40303;
+}
+
+body {
+    background-color: var(--fundo-principal-color);
+    background-image: url(http://www.transparenttextures.com/patterns/soft-wallpaper.png);
+    overflow-x: hidden;
+    margin-top: 120px;
+}
+
+.barra {
+    background-color: var(--fundo-texto);
+    width: 100%;
+    height: 4px;
+}
+
+.menu-mobile{
+    display: none;
+}
+
+section.menu-desktop {
+    color: var(--fundo-texto);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+
+    transition: background-color 0.4s ease-in-out,
+        box-shadow 0.4s ease-in-out,
+        backdrop-filter 0.4s ease-in-out;
+
+    background-color: transparent;
+    backdrop-filter: blur(0px);
+}
+
+/* quando rolar */
+section.menu-desktop.scrooled {
+    background-color: rgba(2, 17, 68, 0.7);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+section.menu-desktop.scrooled .logo {
+    background-color: transparent;
+}
+
+section.menu-desktop nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+}
+
+section.menu-desktop nav ul li a {
+    color: var(--fundo-texto);
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+section.menu-desktop nav ul li {
+    position: relative;
+    padding: 5px 0;
+}
+
+section.menu-desktop nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    border-bottom: 1px solid var(--fundo-texto);
+    transition: width 0.3s ease-in-out;
+}
+
+section.menu-desktop nav ul li a:hover::after {
+    width: 100%;
+}
+
+section.menu-desktop nav ul li a.active::after {
+    width: 100%;
+}
+
+section.menu-desktop nav ul .logo {
+    position: relative;
+    background: var(--fundo-texto);
+    border-bottom-left-radius: 140px 110px;
+    border-bottom-right-radius: 140px 110px;
+    width: 230px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+section.menu-desktop nav ul .logo::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg,
+            rgba(255, 215, 0, 0) 0%,
+            rgba(255, 215, 0, 0.6) 50%,
+            rgba(255, 215, 0, 0) 100%);
+    transform: skewX(-25deg);
+    animation: brilho-dourado 3s infinite;
+}
+
+@keyframes brilho-dourado {
+    0% {
+        left: -75%;
+    }
+
+    50% {
+        left: 125%;
+    }
+
+    100% {
+        left: 125%;
+    }
+}
+
+section.menu-desktop nav ul .logo img {
+    width: 90px;
+}
+
+section.menu-desktop nav .cart {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+}
+
+section.menu-desktop nav .cart .count {
+    position: absolute;
+    top: 0;
+    right: -2px;
+}
+
+footer .newsletter {
+    background-color: var(--back-dourado);
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .newsletter .txt h2 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: var(--fundo-texto);
+}
+
+footer .newsletter .txt p {
+    font-family: "Bebas Neue", sans-serif;
+    color: var(--fundo-texto);
+    letter-spacing: 2px;
+}
+
+footer .newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+footer .newsletter form input {
+    flex: 1;
+    background-color: transparent;
+    padding: 12px 18px;
+    border: 1px solid var(--fundo-texto);
+    border-radius: 30px;
+    font-size: 1rem;
+    color: var(--fundo-texto);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+footer .newsletter form input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+}
+
+footer .newsletter form input:focus {
+    border-color: var(--fundo-principal-color);
+    box-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+}
+
+/* Botão */
+footer .newsletter form button {
+    background: var(--back-dourado);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--fundo-principal-color);
+    transition: all 0.3s ease;
+}
+
+footer .newsletter form button:hover {
+    background: var(--fundo-principal-color);
+    color: var(--back-dourado);
+    border: 1px solid var(--back-dourado);
+    transform: scale(1.05);
+}
+
+footer .footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+    color: var(--fundo-texto);
+}
+
+footer .footer .image {
+    width: 25%;
+
+}
+
+footer .footer .image img {
+    width: 180px;
+}
+
+footer .footer .image h6 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #dfdddd;
+}
+
+footer .footer .links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer .footer .links a {
+    color: var(--fundo-texto);
+    transition: 0.3s ease-in-out;
+}
+
+footer .footer .links a.active{
+    color: var(--back-dourado);
+}
+
+footer .footer .links a:hover {
+    transform: translateX(8px);
+    color: #dfdddd;
+}
+
+footer .footer .links h3 {
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 3px;
+    font-weight: 100;
+}
+
+footer .footer .links h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+footer .end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: var(--back-dourado);
+}
+
+footer .end h4 {
+    color: var(--fundo-texto);
+    font-size: 16px;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 2px;
+}
+
+footer .end h4 span{
+    color: var(--fundo-principal-color);
+}
+
+footer .end .icones{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.face,
+.whats,
+.insta{
+    cursor: pointer;
+    color: var(--fundo-texto);
+    transition: 0.3s ease-in-out;
+}
+
+.insta:hover{
+    color: #dd2a7b;
+    scale: 1.1;
+}
+
+.whats:hover{
+    color: #25D366;
+    scale: 1.1;
+}
+
+.face:hover{
+    color: #1877F2;
+    scale: 1.1;
+}
+
+::-webkit-scrollbar{
+    background-color: var(--fundo-principal-color);
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--fundo-texto);
+}
