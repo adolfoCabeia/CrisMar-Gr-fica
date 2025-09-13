@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { ShoppingBasket, User, House, Info, MessageSquare, ShoppingCart } from "lucide-react"
+import { ShoppingBasket, User, House, ShoppingCart, Info } from "lucide-react"
 import { NavLink } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
@@ -64,12 +64,12 @@ const Header = () => {
                     <img src={assets.Logo} alt="Logo" />
                 </div>
 
-                <NavLink to={'/testemunhos'} title='Testemunhos'>
-                    <MessageSquare size={28} />
+                <NavLink to={'/sobre-nos'} title='Testemunhos'>
+                    <Info size={28} />
                 </NavLink>
 
-                <NavLink to={'/sobre'} title='Sobre-nós'>
-                    <Info size={28} />
+                <NavLink to={'/login'} title='Sobre-nós'>
+                    <User size={28} />
                 </NavLink>
             </section>
 

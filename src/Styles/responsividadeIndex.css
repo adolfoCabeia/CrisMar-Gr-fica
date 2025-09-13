@@ -1,3 +1,63 @@
+@media (max-width: 885px){
+    section.hero .categorias h2 {
+        font-size: 1rem;
+    }
+     section.hero {
+        flex-direction: column-reverse;
+        padding: 20px;
+    }
+
+   section.servicos {
+    padding: 40px 20px;
+  }
+
+  section.servicos h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  section.servicos .salao_beleza {
+    flex-direction: column; /* Coloca card principal em cima e serviços embaixo */
+    gap: 20px;
+  }
+
+  section.servicos .salao_beleza .card-principal {
+    width: 100%;  /* Ocupa toda a largura */
+    height: 220px;
+  }
+
+  section.servicos .salao_beleza .card-principal h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  section.servicos .salao_beleza .servico {
+    width: 100%; /* ocupa toda a largura */
+    flex-wrap: wrap; /* quebra os cards em linhas */
+    justify-content: center;
+  }
+
+  section.servicos .salao_beleza .servico .card img {
+    height: 160px;
+  }
+
+  section.servicos .salao_beleza .servico .card .nome-produto h3 {
+    font-size: 1rem;
+  }
+
+  section.servicos .salao_beleza .servico .card .price_recent {
+    font-size: 1.1rem;
+  }
+
+  section.servicos .salao_beleza .servico .card .price_last {
+    font-size: 0.9rem;
+  }
+
+  .prod-card{
+    justify-content: center;
+  }
+}
+
 @media (max-width: 575px) {
     body {
         margin-top: 0;
