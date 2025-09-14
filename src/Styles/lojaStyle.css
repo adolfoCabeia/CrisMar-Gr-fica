@@ -194,8 +194,8 @@
 }
 
 .shop .navbar .prod {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    display: flex !important;
+    flex-wrap: wrap !important;
     gap: 25px;
 }
 
