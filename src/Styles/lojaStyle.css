@@ -1,0 +1,204 @@
+.show-sidebar{
+    display: none;
+}
+
+.shop {
+    display: flex;
+    gap: 30px;
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.shop .sidebar {
+    background: var(--fundo-principal-color);
+    padding: 25px 20px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+    position: sticky;
+    top: 100px;
+    height: fit-content;
+}
+
+.shop .sidebar h2 {
+    color: var(--fundo-texto);
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.expand.filtros {
+    color: var(--fundo-texto);
+    font-family: "Lato", sans-serif;
+}
+
+
+.filtro {
+    margin-bottom: 22px;
+}
+
+.filtro h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    color: var(--back-dourado);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    padding-bottom: 5px;
+}
+
+.filtro label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 6px 0;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.filtro label:hover {
+    color: var(--back-dourado);
+}
+
+.filtro input[type="checkbox"],
+.filtro input[type="radio"] {
+    accent-color: var(--back-dourado);
+    cursor: pointer;
+}
+
+.filtro input[type="number"] {
+    width: 45%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--fundo-texto);
+    font-size: 0.9rem;
+    transition: border 0.3s ease;
+}
+
+.filtro input[type="number"]:focus {
+    border: 1px solid var(--back-dourado);
+    outline: none;
+}
+
+.filtro input[type="number"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+    font-style: italic;
+}
+
+.filtro select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid rgba(255,255,255,0.4);
+    background: transparent;
+    color: var(--fundo-texto);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: border 0.3s ease;
+}
+
+.filtro select:focus {
+    border: 1px solid var(--back-dourado);
+    outline: none;
+}
+
+.filtro select option {
+    background: var(--fundo-principal-color);
+    color: var(--fundo-texto);
+}
+
+
+.filtro-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.filtro-actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.filtro-actions button[type="submit"] {
+    background: var(--back-dourado);
+    color: var(--fundo-principal-color);
+}
+
+.filtro-actions button[type="submit"]:hover {
+    background: #b9952c;
+}
+
+.filtro-actions button[type="reset"] {
+    background: transparent;
+    border: 1px solid var(--back-dourado);
+    color: var(--back-dourado);
+}
+
+.filtro-actions button[type="reset"]:hover {
+    background: var(--back-dourado);
+    color: var(--fundo-principal-color);
+}
+
+.shop .navbar {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop .navbar h1{
+    font-size: 1.8rem;
+    text-align: center;
+  color: var(--fundo-texto);
+}
+
+.shop .navbar p{
+    font-size: 1rem;
+    text-align: center;
+  color: var(--fundo-texto);
+  margin-bottom: 15px;
+}
+
+.shop .navbar form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.shop .navbar input[type="search"] {
+    width: 100%;
+    max-width: 500px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.shop .navbar input[type="search"]:focus {
+    border: 1px solid var(--back-dourado);
+    box-shadow: 0 0 6px var(--back-dourado);
+}
+
+.shop .navbar .prod {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.shop .navbar .prod .price .price_recent{
+    font-size: 1rem;
+}

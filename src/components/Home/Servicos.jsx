@@ -466,10 +466,11 @@ const Servicos = () => {
                     <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
                     <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
                     <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
+                    <ProdutoProps image={assets.Decoracao} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
+                    <ProdutoProps image={assets.Decoracao} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
                     <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
                     <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
-                    <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
-                    <ProdutoProps image={assets.Slide2} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
+                    <ProdutoProps image={assets.Grafica} nomeProduto="Buquê de noiva" precoNovo="19 000kzs" precoAntigo="24 000kzs" />
                 </div>
             </div>
         </section>

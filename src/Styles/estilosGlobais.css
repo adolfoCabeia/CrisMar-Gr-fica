@@ -28,7 +28,11 @@ body {
 }
 
 .menu-mobile{
-    display: none;
+    display: none !important;
+}
+
+.cart-mobile{
+    display: none !important;
 }
 
 section.menu-desktop {

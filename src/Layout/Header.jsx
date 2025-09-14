@@ -51,6 +51,12 @@ const Header = () => {
                 </nav>
             </section>
 
+            <div className="cart-mobile">
+                <div className="cart">
+                    <ShoppingBasket size={32} />
+                    <span className='count'>0</span>
+                </div>
+            </div>
             <section className="menu-mobile">
                 <NavLink to={'/'} title='Início' className={({ isActive }) => isActive ? 'active' : ''}>
                     <House size={28} />
@@ -64,13 +70,14 @@ const Header = () => {
                     <img src={assets.Logo} alt="Logo" />
                 </div>
 
-                <NavLink to={'/sobre-nos'} title='Testemunhos'>
+                <NavLink to={'/sobre-nos'} title='Sobre-nós'>
                     <Info size={28} />
                 </NavLink>
 
-                <NavLink to={'/login'} title='Sobre-nós'>
+                <NavLink to={'/login'} title='Minha Conta'>
                     <User size={28} />
                 </NavLink>
+
             </section>
 
         </header>
