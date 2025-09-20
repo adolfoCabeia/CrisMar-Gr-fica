@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { ShoppingBasket, User, House, ShoppingCart, Info } from "lucide-react"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { assets } from '../assets/assets'
 
 const Header = () => {
     const [scrooled, setScrooled] = useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const handleScrooled = () => {
@@ -26,8 +27,8 @@ const Header = () => {
                 <div className="barra"></div>
                 <nav>
                     <ul>
-                        <div className="cart">
-                            <ShoppingBasket size={32} />
+                        <div className="cart" onClick={()=>navigate('/carrinho')}>
+                            <ShoppingBasket size={32} className='cart-icon'/>
                             <span className='count'>0</span>
                         </div>
                         <li>
@@ -46,17 +47,18 @@ const Header = () => {
                         <li>
                             <NavLink to={'/testemunhos'}>Testemunhos</NavLink>
                         </li>
-                        <User size={32} />
+                        <User size={32} className='user-icon' onClick={()=>navigate('/logar')}/>
                     </ul>
                 </nav>
             </section>
 
-            <div className="cart-mobile">
+            <div className="cart-mobile" onClick={()=>navigate('/carrinho')}>
                 <div className="cart">
                     <ShoppingBasket size={32} />
                     <span className='count'>0</span>
                 </div>
             </div>
+
             <section className="menu-mobile">
                 <NavLink to={'/'} title='Início' className={({ isActive }) => isActive ? 'active' : ''}>
                     <House size={28} />
@@ -74,7 +76,7 @@ const Header = () => {
                     <Info size={28} />
                 </NavLink>
 
-                <NavLink to={'/login'} title='Minha Conta'>
+                <NavLink to={'/logar'} title='Minha Conta'>
                     <User size={28} />
                 </NavLink>
 

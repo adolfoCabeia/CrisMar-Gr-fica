@@ -1,0 +1,125 @@
+section.login {
+    padding: 0 30px;
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.login .container {
+    display: flex;
+    background-color: var(--fundo-texto);
+    border-radius: 20px;
+    gap: 30px;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    height: 90vh;
+    width: 80%;
+    overflow: hidden;
+}
+
+/* FORMULÁRIOS */
+section.login .container .register-form,
+section.login .container .login-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+/* LOGIN FORM */
+section.login .container .login-form h2 {
+    color: var(--fundo-principal-color);
+    font-size: 2rem;
+}
+
+section.login .container .login-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+section.login .container .login-form form input {
+    border: none;
+    border-bottom: 2px solid #999;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--fundo-principal-color);
+    padding: 10px;
+    transition: border-color 0.3s ease;
+}
+
+section.login .container .login-form form input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+section.login .container .login-form form input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--back-dourado);
+}
+
+section.login .container .login-form form p {
+    text-align: center;
+    color: var(--fundo-principal-color);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+section.login .container .login-form form p:hover {
+    color: var(--back-dourado);
+}
+
+/* BOTÕES */
+section.login .container .login-form form .button,
+section.login .container .register-form .button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+section.login .container .register-form button,
+section.login .container .login-form form .button button {
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: var(--back-dourado);
+    transition: 0.3s ease-in-out;
+    color: var(--fundo-principal-color);
+}
+
+section.login .container .register-form button:hover,
+section.login .container .login-form form .button button:hover {
+    letter-spacing: 1.5px;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* REGISTER FORM */
+section.login .container .register-form {
+    background: linear-gradient(135deg, var(--fundo-principal-color), #2a2a72);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 200px;
+    border-bottom-left-radius: 100px;
+    color: var(--fundo-texto);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+section.login .container .register-form h2 {
+    font-size: 2rem;
+}
+
+section.login .container .register-form p {
+    font-size: 1rem;
+    text-align: center;
+    line-height: 25px;
+    max-width: 80%;
+}
+

@@ -325,7 +325,6 @@ const Servicos = () => {
                                         <button>Solicitar</button>
                                     </div>
                                 </div>
-
                             </SwiperSlide>
                             <SwiperSlide>
                                 <div className="card">

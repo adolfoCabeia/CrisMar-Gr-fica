@@ -1,0 +1,258 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 40px;
+  margin-bottom: 40px;
+  min-height: 100vh;
+}
+
+.recibo-card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(255, 215, 0, 0.25);
+  border-radius: 24px;
+  padding: 40px;
+  color: #f5f5f5;
+  width: 80%;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  text-align: center;
+  animation: fadeInUp 0.7s ease;
+}
+
+.checkmark {
+  color: #ffd700;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo-principal {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #ffd700, #f0e68c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtexto {
+  font-size: 1rem;
+  color: #cfcfcf;
+}
+
+.subtexto .destaque {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.recibo-detalhes {
+  margin: 30px 0;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.header-detalhes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  padding-bottom: 8px;
+}
+
+.header-detalhes h2 {
+  font-size: 1.2rem;
+  color: #ffd700;
+}
+
+.header-detalhes .data {
+  font-size: 0.9rem;
+  color: #d1d1d1;
+}
+
+.grid-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.grid-info p {
+  margin: 0;
+  color: #eaeaea;
+}
+
+.recibo-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.recibo-tabela th {
+  padding: 14px;
+  background: rgba(255,215,0,0.12);
+  color: #ffd700;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.recibo-tabela td {
+  padding: 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: #f7f7f7;
+}
+
+.recibo-tabela tfoot td {
+  border-top: 2px solid #ffd700;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.btn.voltar {
+  background: transparent;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+}
+
+.btn.voltar:hover {
+  background: #ffd700;
+  color: #1a1a1a;
+}
+
+.btn.pdf {
+  background: linear-gradient(135deg, #ffd700, #e6c200);
+  color: #1a1a1a;
+}
+
+.btn.pdf:hover {
+  background: linear-gradient(135deg, #e6c200, #ccac00);
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 1024px) {
+  .recibo-card {
+    width: 90%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .titulo-principal {
+    font-size: 1.6rem;
+  }
+
+  .subtexto {
+    font-size: 0.9rem;
+  }
+
+  .recibo-card {
+    padding: 25px;
+    width: 100%;
+  }
+
+  .grid-info {
+    grid-template-columns: 1fr; 
+    gap: 10px;
+  }
+
+  .header-detalhes h2 {
+    font-size: 1rem;
+  }
+
+  .header-detalhes .data {
+    font-size: 0.8rem;
+  }
+
+  .recibo-tabela th, 
+  .recibo-tabela td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .recibo-card {
+    padding: 20px;
+    border-radius: 16px;
+    width: 100%;
+  }
+
+  .titulo-principal {
+    font-size: 1.4rem;
+  }
+
+  .subtexto {
+    font-size: 0.85rem;
+  }
+
+  .recibo-detalhes {
+    font-size: 0.9rem;
+  }
+
+  .recibo-tabela {
+    display: block;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .recibo-tabela th, 
+  .recibo-tabela td {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}

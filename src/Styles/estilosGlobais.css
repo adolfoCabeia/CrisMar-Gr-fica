@@ -51,7 +51,6 @@ section.menu-desktop {
     backdrop-filter: blur(0px);
 }
 
-/* quando rolar */
 section.menu-desktop.scrooled {
     background-color: rgba(2, 17, 68, 0.7);
     backdrop-filter: blur(10px);
@@ -162,6 +161,26 @@ section.menu-desktop nav .cart .count {
     position: absolute;
     top: 0;
     right: -2px;
+    font-weight: 700;
+}
+
+section.menu-desktop nav .cart .cart-icon{
+    transition: 0.3s ease-in-out;
+}
+
+section.menu-desktop nav .cart .cart-icon:hover{
+    color: var(--back-dourado);
+    scale: 1.1;
+}
+
+section.menu-desktop nav .user-icon{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+section.menu-desktop nav .user-icon:hover{
+    color: var(--back-dourado);
+    scale: 1.1;
 }
 
 footer .newsletter {
